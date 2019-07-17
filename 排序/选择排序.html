@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>选择排序：</h3>
+    <p class="summary">
+        是一种原址比较排序算法。找到数据结构中的最小值并将其放置在第一位，接着找到第二小的值放置在第二位，以此类推。
+    </p>
+    <p>
+        和冒泡排序一样效率低下，需要循环嵌套
+    </p>
+
+    <script>
+        //原址排序：基本上不需要额外辅助的空间，允许少量额外的变量进行的排序。就是在语言来的排序数组中比较和交换的排序
+        
+        function selectionSort (array, compareFn = defaultCompare) {
+            const { length } = array;
+            let minIndex;
+            for (let i = 0; i < length - 1; i++) {
+                minIndex = i;
+                for (let j = i; j < length; j++) {
+                    if (compareFn(array[minIndex], array[j])) {
+                        minIndex = j;
+                    }
+                }
+                if (i !== minIndex) {
+                    swap(array, i, minIndex);
+                }
+                console.log(array);
+            }
+            return array;
+        }
+
+        function defaultCompare (a, b) {
+            return a > b;
+        }
+
+        function swap (array, a, b) {
+            [array[a], array[b]] = [array[b], array[a]];
+        }
+
+        const array = [9, 3, 5, 1, 2, 6];
+        selectionSort(array)
+
+
+    
+    </script>
+</body>
+</html>

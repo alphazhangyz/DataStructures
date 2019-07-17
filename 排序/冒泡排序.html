@@ -57,7 +57,6 @@
                 for (let j = 0; j < length - 1 - i; j ++) {
                     if (compareFn(array[j], array[j + 1])) {
                         swap(array, j, j + 1);
-                        isOver = false;
                     }
                 }
                 console.log(array)
@@ -70,14 +69,14 @@
         function superBubbleSort (array, compareFn = defaultCompare) {
             const { length } = array;
             for (let i = 0; i < length; i++) {
-                let isOver = true;
+                let isFinish = true;
                 for (let j = 0; j < length - 1 - i; j ++) {
                     if (compareFn(array[j], array[j + 1])) {
                         swap(array, j, j + 1);
-                        isOver = false;
+                        isFinish = false;
                     }
                 }
-                if (isOver) break;
+                if (isFinish) break;
                 console.log(array)
             }
             return array

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>归并排序：</h3>
+    <p class="summary">
+        归并排序是一种分治法算法。将原始数组切分成较小的数组，直到每个小数组只有一个位置，接着将小数组归并成较大的数组，直到最后只有一个排序完毕的大数组
+    </p>
+    <p>
+        由于是分治法，归并排序也是递归的。
+    </p>
+
+    <script>
+        //数组的sort， 火狐就是利用归并排序实现的，chrome的V8使用的是快排
+
+        function mergeSort (array, compareFn = defaultCompare) {
+            
+            if (array.length > 1) {
+                const { length } = array;
+                debugger
+                const middle = Math.floor(length / 2);
+                const leftArr = mergeSort(array.slice(0, middle), compareFn);
+                const rightArr = mergeSort(array.slice(middle, length), compareFn);
+                // array = merge(leftArr, rightArr, compareFn)
+                console.log('leftArr',leftArr)
+                console.log('rightArr',rightArr)
+            }
+            return array;
+        }
+
+        function defaultCompare (a, b) {
+            return a > b;
+        }
+
+        function merge (left, right, compareFn) {
+
+            let i = 0, 
+                j = 0;
+            const result = [];
+            while (i < left.length && j < right.length) {
+                result.push((compareFn(left[i], right[j]) ? right[j++] : left[i++]))
+            }
+            return result.concat(i < left.length ? left.slice(i) : right.slice(j));
+
+        }
+    
+        const array = [9, 3, 5, 1, 2, 6];
+        mergeSort(array)
+
+
+    </script>
+</body>
+</html>
