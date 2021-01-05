@@ -25,3 +25,46 @@
 ## 在任意位置添加或删除元素
 
 - `splice(startIndex, removeCount, addItems)`
+
+## 二维和多维数组
+
+> js 可以利用数组嵌套数组实现二维或者多维数组
+
+## js 数组方法参考
+
+- 排序元素
+
+  - sort(compareFunction)
+  ```js
+    function compare (a, b) {
+      if (a > b) return 1
+      if (a < b) return -1
+      return 0
+    }
+
+  ```
+
+  - 自定义排序
+  ```js
+    // 对任何对象类型对数组排序，也可以根据 compareFunction 来比较元素
+    const friends = [
+      {name: 'James', age: 20},
+      {name: 'Jake', age: 18},
+      {name: 'Lucy', age: 22}
+    ]
+
+    function comparePersonByAge (a, b) {
+      if (a.age < b.age) return -1
+      if (a.age > b.age) return 1
+      return 0
+    }
+    const sortPerson = friends.sort(comparePersonByAge)
+    console.log(sortPerson)
+    //[
+    //  {name: 'Jake', age: 18},
+    //  {name: 'James', age: 20},
+    //  {name: 'Lucy', age: 22}
+    //]
+    
+
+  ```
