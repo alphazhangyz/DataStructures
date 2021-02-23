@@ -34,3 +34,5 @@ let num = decimalToBinary(100)
 console.log(num)
 let num2 = decimalToBinary(100, true)
 console.log(num2)
+
+console.log(decimalToBinary(10))
