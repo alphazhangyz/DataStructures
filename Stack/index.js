@@ -114,3 +114,8 @@ class StackArray {
     return retString
   }
 }
+
+module.exports = {
+  Stack,
+  StackArray
+}
