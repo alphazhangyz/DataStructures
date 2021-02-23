@@ -60,3 +60,57 @@ class Stack {
     return retString
   }
 }
+
+
+/**
+ * 栈 数组封装
+ */
+
+class StackArray {
+  constructor () {
+    this.items = []
+  }
+
+  // 添加
+  push (element) {
+    this.items.push(element)
+  }
+
+  // 大小
+  size () {
+    return this.items.length
+  }
+
+  // 验证是否为空
+  isEmpty () {
+    return this.items.length === 0
+  }
+
+  // 从栈中弹出元素
+  pop () {
+    if (this.isEmpty()) return undefined
+    return this.items.pop()
+  }
+
+  // 获取栈顶顶数据
+  peek () {
+    if (this.isEmpty()) return undefined
+    return this.items[this.items.length - 1]
+  }
+
+  // 清空
+  clear () {
+    while(!this.isEmpty()) {
+      this.items.pop()
+    }
+  }
+
+  toString () {
+    if (this.isEmpty()) return ''
+    let retString = `${this.items[0]}`
+    for (let i = 0, len = this.items.length; i < len; i++) {
+      retString = `${retString},${this.items[i]}`
+    }
+    return retString
+  }
+}
