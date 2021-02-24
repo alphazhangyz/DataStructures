@@ -126,3 +126,8 @@ class QueueArray {
   }
 
 }
+
+module.exports = {
+  Queue,
+  QueueArray
+}
