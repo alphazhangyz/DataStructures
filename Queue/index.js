@@ -66,3 +66,63 @@ class Queue {
   }
 
 }
+
+
+
+/**
+ * 基于数组实现
+ */
+
+class QueueArray {
+  constructor () {
+    this.items = []
+  }
+
+  // 添加元素
+  enqueue (element) {
+    this.items.push(element)
+  }
+
+  // 移除第一项并返回该项
+  dequeue () {
+    if (this.isEmpty()) return undefined
+    return this.items.shift()
+  }
+
+  // 查看第一项
+  peek () {
+    if (this.isEmpty()) return undefined
+    return this.items[0]
+  }
+
+  // 是否为空
+  isEmpty () {
+    return this.size() === 0
+  }
+
+  // 长度
+  size () {
+    return this.items.length
+  }
+
+  // 清空队列
+  clear () {
+    /**
+     * 简单暴力版
+     * this.items = []
+     */
+    while (!this.isEmpty()) {
+      this.enqueue()
+    }
+  }
+
+  toString () {
+    if (this.isEmpty()) return ''
+    let retString = `${this.items[0]}`
+    for (let i = 1, len = this.items.length; i < len; i ++) {
+      retString = `${retString},${this.items[i]}`
+    }
+    return retString
+  }
+
+}
