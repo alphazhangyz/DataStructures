@@ -6,3 +6,5 @@
 
 ## [队列和双端队列](./Queue/index.md)
 
+## [链表](./Linked/index.md)
+
