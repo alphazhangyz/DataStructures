@@ -86,3 +86,7 @@ class Deque {
     return retString
   }
 }
+
+module.exports = {
+  Deque
+}
