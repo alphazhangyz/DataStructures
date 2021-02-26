@@ -3,6 +3,10 @@ const { Deque } = require('./deque')
 // 回文检查
 
 /**
+ * 最简单的方式是 反转字符串之后比较俩字符串是否相同
+ */
+
+/**
  * 
  * @param { String } str 
  * @return { Boolean }
