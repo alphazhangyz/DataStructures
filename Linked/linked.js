@@ -67,7 +67,12 @@ class Linked {
 
   // indexOf 返回元素在链表中的索引，如果不存在则返回 -1
   indexOf (element) {
-
+    let current = this.head
+    for (let i = 0; i < this.count && current !== null; i++) {
+      if (current.element === element) return i
+      current = current.next
+    }
+    return -1
   }
 
   // removeAt 从链表特定位置移除一个元素
@@ -85,17 +90,28 @@ class Linked {
     return this.count
   }
 
+  getHead () {
+    return this.head
+  }
+
   // toString
   toString () {
-
+    if (this.head === null) return ''
+    let linkedString = `${this.head.element}`
+    let current = this.head.next
+    for (let i = 0; i < this.size() && current !== null; i++) {
+      linkedString = `${linkedString},${current.element}`
+      current = current.next
+    }
+    return linkedString
   }
 
   // 返回链表中特定位置的元素，如果不存在则返回 undefined
   getElementAt (position) {
-    if (position < 0 || position > this.count) return undefined
+    if (position < 0 || position >= this.count) return undefined
     let node = this.head
     let index = 0
-    while (index++ < position) {
+    while (index++ < position && node !== null) {
       node = node.next
     }
     return node
@@ -103,3 +119,4 @@ class Linked {
 
 
 }
+
