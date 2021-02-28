@@ -31,5 +31,75 @@ class Linked {
     this.count++
   }
 
+  // insert 向链表的特定位置插入一个新元素
+  insert (element, position) {
+    // 插入元素边界位置判断
+    if (position < 0 || position > this.count) return false
+
+    const node = new Node(element)
+    let current = this.head
+    if (position === 0) {
+      // 插入链表头
+      node.next = current
+      this.head = node
+    } else {
+      // let previous = null
+      // let index = 0
+      // while (index++ < position) {
+      //   previous = current
+      //   current = current.next
+      // }
+      // node.next = current
+      // previous.next = node
+      const previous = this.getElementAt(position - 1)
+      current = previous.next
+      node.next = current
+      previous.next = node
+    }
+    this.count++
+    return true
+  }
+
+  // remove 从链表中移除一个元素
+  remove (element) {
+
+  }
+
+  // indexOf 返回元素在链表中的索引，如果不存在则返回 -1
+  indexOf (element) {
+
+  }
+
+  // removeAt 从链表特定位置移除一个元素
+  removeAt (position) {
+
+  }
+
+  // isEmpty 判断链表是否为空
+  isEmpty () {
+    return this.size() === 0
+  }
+
+  // 链表包含元素个数
+  size () {
+    return this.count
+  }
+
+  // toString
+  toString () {
+
+  }
+
+  // 返回链表中特定位置的元素，如果不存在则返回 undefined
+  getElementAt (position) {
+    if (position < 0 || position > this.count) return undefined
+    let node = this.head
+    let index = 0
+    while (index++ < position) {
+      node = node.next
+    }
+    return node
+  }
+
 
 }
