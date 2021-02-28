@@ -132,5 +132,6 @@ class Linked {
 }
 
 module.exports = {
-  Linked
+  Linked,
+  Node
 }
