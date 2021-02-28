@@ -32,13 +32,13 @@ class Linked {
   }
 
   // insert 向链表的特定位置插入一个新元素
-  insert (element, position) {
+  insert (element, index) {
     // 插入元素边界位置判断
-    if (position < 0 || position > this.count) return false
+    if (index < 0 || index > this.count) return false
 
     const node = new Node(element)
     let current = this.head
-    if (position === 0) {
+    if (index === 0) {
       // 插入链表头
       node.next = current
       this.head = node
@@ -51,7 +51,7 @@ class Linked {
       // }
       // node.next = current
       // previous.next = node
-      const previous = this.getElementAt(position - 1)
+      const previous = this.getElementAt(index - 1)
       current = previous.next
       node.next = current
       previous.next = node
@@ -62,7 +62,8 @@ class Linked {
 
   // remove 从链表中移除一个元素
   remove (element) {
-
+    const index = this.indexOf(element)
+    return this.removeAt(index)
   }
 
   // indexOf 返回元素在链表中的索引，如果不存在则返回 -1
@@ -76,8 +77,18 @@ class Linked {
   }
 
   // removeAt 从链表特定位置移除一个元素
-  removeAt (position) {
-
+  removeAt (index) {
+    if (index < 0 || index > this.count) return undefined
+    
+    let current = this.head
+    if (index === 0) {
+      this.head = current.next
+    } else {
+      let previous = this.getElementAt(index - 1)
+      current = previous.next
+      previous.next = current.next
+    }
+    this.count--
   }
 
   // isEmpty 判断链表是否为空
@@ -107,11 +118,11 @@ class Linked {
   }
 
   // 返回链表中特定位置的元素，如果不存在则返回 undefined
-  getElementAt (position) {
-    if (position < 0 || position >= this.count) return undefined
+  getElementAt (index) {
+    if (index < 0 || index >= this.count) return undefined
     let node = this.head
-    let index = 0
-    while (index++ < position && node !== null) {
+    let _index = 0
+    while (_index++ < index && node !== null) {
       node = node.next
     }
     return node
