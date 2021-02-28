@@ -131,3 +131,6 @@ class Linked {
 
 }
 
+module.exports = {
+  Linked
+}
