@@ -49,6 +49,34 @@ class DoubleLinked extends Linked {
       current.prev = node
       node.prev = previous
     }
+    return true
+  }
+
+  // 任意位置移除
+  removeAt(index) {
+    if (index < 0 || index >= this.count) return undefined
+    
+    let current = this.head
+    if (index === 0) {
+      this.head = current.next
+      if (this.count === 1) {
+        this.tail = undefined
+      } else {
+        this.head.prev = undefined
+      }
+    } else if (index === this.count - 1) {   // 移除最后一项
+      current = this.tail
+      this.tail = current.prev
+      this.tail.next = undefined
+    } else {
+      current = this.getElementAt(index)
+      const previous = current.prev
+      previous.next = current.next
+      current.next.prev = previous
+    }
+    this.count--
+    return current.element
+
   }
 }
 
