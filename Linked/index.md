@@ -13,7 +13,8 @@
 ## 双向链表
 
 > 双向链表和普通链表的区别在于，在普通链表中，一个节点只有链向下一个节点的链接；而在双向链表中，链接是双向的；一个链向下一个元素，另一个链向前一个元素
-![image text](./images/doubleLinked.jpg)
+
+![image text](./images/doubleLinked.drawio.svg)
 
 - 每次插入或者删除都需要处理4个引用，而不是2个，比较麻烦
 
