@@ -14,3 +14,5 @@
 
 - [字典](./Dictionary/index.md)
 
+- [散列表](./HashTable/index.md)
+
