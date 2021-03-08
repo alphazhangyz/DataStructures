@@ -34,6 +34,10 @@
 
 ![image text](./images/circularLinked.drawio.svg)
 
+> 循环链表删除任意位置的元素
+
+![image text](./images/removeCircularLinked.drawio.svg)
+
 > 双向循环链表有指向 head 元素的 tail.next 和指向 tail 元素的 head.prev
 
 ![image text](./images/doubleCircularLinked.drawio.svg)
