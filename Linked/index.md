@@ -41,3 +41,5 @@
 > 双向循环链表有指向 head 元素的 tail.next 和指向 tail 元素的 head.prev
 
 ![image text](./images/doubleCircularLinked.drawio.svg)
+
+## 有序链表
