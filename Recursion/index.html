@@ -16,7 +16,94 @@
       return n * factorial(n - 1)
     }
 
-    factorial(5)
+    function factorial1 (n, n1 = 1) {
+      if (n === 1) return n1
+      return factorial1(n - 1, n * n1)
+    }
+    console.log(factorial(5))
+
+    console.log(factorial(5))
+    let cc = 0
+    function fibonacci (n) {
+      cc++
+      if (n < 1) {
+        return 0
+      }
+      if (n <= 2) {
+        return 1
+      }
+      return fibonacci(n - 1) + fibonacci(n - 2)
+    }
+    console.log(fibonacci(9))
+    console.log(cc)
+
+    let dd = 0
+    function fibonacciMemoization (num) {
+      let memo = [0, 1, 1]
+      const fibonacci = n => {
+        dd++
+        if (memo[n] != null) {
+          return memo[n]
+        }
+        return memo[n] = fibonacci(n -1) + fibonacci(n - 2)
+      }
+      return fibonacci(num)
+    }
+
+  const ret = fibonacciMemoization(9)
+  console.log(ret)
+  console.log(dd)
+
+  let count = 0
+//   const fibonacci1 = (function () {
+//   const f = {}
+//   return function(n) {
+//     count++
+//     if(n === 0 || n === 1) {
+//       return n
+//     }
+//     if(f[n-2] === undefined) {
+//       f[n-2] = fibonacci1(n-2)
+//     }
+//     if(f[n-1] === undefined) {
+//       f[n-1] = fibonacci1(n-1)
+//     }
+//     return f[n] = f[n-1] + f[n-2]
+//   }
+// })()
+
+// console.log(fibonacci1(9))
+// console.log(count)
+
+let ff = 0
+function factorial2(n, n1 = 1, n2 = 1) {
+  ff++
+  if (n <= 2) {
+    return n2;
+  }
+  return factorial2(n - 1, n2, n1 + n2);
+}
+
+console.log(factorial2(9))
+console.log(ff)
+
+function fibonacciMemoizationObj (num) {
+    const cache = {}
+    const fibonacci = n => {
+      if (n < 1) return 0
+      if (!cache[n - 2]) {
+        cache[n - 2] = fibonacci(n - 2)
+      }
+      if (!cache[n - 1]) {
+        cache[n - 1] = fibonacci(n - 1)
+      }
+      return cache[n] = fibonacci(n - 1) + fibonacci(n - 2)
+    }
+    return fibonacci(num)
+  }
+
+  // console.log(fibonacciMemoizationObj(9))
+
 
 
   </script>
