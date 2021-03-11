@@ -23,6 +23,46 @@ class BinarySearchTree {
     this.compareFn = compareFn
   }
 
+  // 向树中插入一个新的键
+  insert (key) {
+
+  }
+
+  // 在树中查找一个键
+  search (key) {
+
+  }
+
+  // 中序遍历方式遍历所有节点
+  inOrderTraverse () {
+
+  }
+
+  // 先序遍历方式遍历所有节点
+  preOrderTraverse () {
+
+  }
+
+  // 后序遍历方式遍历所有节点
+  postOrderTraverse () {
+
+  }
+
+  // 返回树中最小的值/键
+  min () {
+
+  }
+
+  // 返回树中最大的值/键
+  max () {
+
+  }
+
+  // 从树中移除某个键
+  remove (key) {
+    
+  }
+
 
   
 }
