@@ -22,6 +22,10 @@
 
   ![image text](./images/bst-insert.drawio.svg)
 
+  > 查找元素
+
+  ![image text](./images/search-bst-key.drawio.svg)
+
 - 遍历二叉搜索树
 
   - 中序遍历
