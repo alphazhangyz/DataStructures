@@ -74,12 +74,28 @@ class BinarySearchTree {
 
   // 返回树中最小的值/键
   min () {
+    return this.getMinNode(this.root)
+  }
 
+  getMinNode (node) {
+    let current = node
+    while (current != null && current.left != null) {
+      current = current.left
+    }
+    return current
   }
 
   // 返回树中最大的值/键
   max () {
+    return this.getMaxNode(this.root)
+  }
 
+  getMaxNode (node) {
+    let current = node
+    while (current != null && current.right != null) {
+      current = current.right
+    }
+    return current
   }
 
   // 从树中移除某个键
