@@ -25,7 +25,31 @@ class BinarySearchTree {
 
   // 向树中插入一个新的键
   insert (key) {
+    // 判断是否有根节点
+    if (this.root == null) {
+      this.root = new Node(key)
+    } else {
+      this.insertNode(this.root, key)
+    }
+  }
 
+  insertNode (node, key) {
+    // 判断新插入的key和现有节点node的key的大小
+    if (node.key > key) {
+      // 只能插入到node的左侧
+      if (node.left == null) {
+        node.left = new Node(key)
+      } else {
+        this.insertNode(node.left, key)
+      }
+    } else {
+      // 只能插入到node的右侧
+      if (node.right == null) {
+        node.right = new Node(key)
+      } else {
+        this.insertNode(node.right, key)
+      }
+    }
   }
 
   // 在树中查找一个键

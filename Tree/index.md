@@ -16,6 +16,8 @@
 
   - `二叉搜索树(BST)`（**`Binary Search Tree`**）是二叉树的一种，但是`只允许在左侧子节点存储比父节点小的值，在右侧子节点存储比父节点大的值`
 
+  ![image text](./images/bst.drawio.svg)
+
 - 遍历二叉搜索树
 
   - 中序遍历
