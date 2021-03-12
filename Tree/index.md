@@ -18,6 +18,10 @@
 
   ![image text](./images/bst.drawio.svg)
 
+  > 插入元素
+
+  ![image text](./images/bst-insert.drawio.svg)
+
 - 遍历二叉搜索树
 
   - 中序遍历
