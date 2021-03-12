@@ -54,7 +54,21 @@ class BinarySearchTree {
 
   // 在树中查找一个键
   search (key) {
+    return this.searchNode(this.root, key)
+  }
 
+  searchNode (node, key) {
+    if (node == null) return false
+    if (node.key > key) {
+      // 节点左侧
+      return this.searchNode(node.left, key)
+    } else if (node.key < key) {
+      // 节点右侧
+      return this.searchNode(node.right, key)
+    } else {
+      // 找到了节点
+      return true
+    }
   }
 
   // 中序遍历方式遍历所有节点

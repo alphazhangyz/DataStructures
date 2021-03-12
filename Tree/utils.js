@@ -18,3 +18,5 @@ bst.insert(22)
 
 console.log(bst.min())
 console.log(bst.max())
+
+console.log(bst.search(41))
