@@ -20,3 +20,11 @@
 
 - [树](./Tree/index.md)
 
+## 排序算法
+
+- [冒泡排序](./SortAlgorithms/bubble/index.md)
+
+- [选择排序](./SortAlgorithms/selection/index.md)
+
+- [插入排序](./SortAlgorithms/insertion/index.md)
+
