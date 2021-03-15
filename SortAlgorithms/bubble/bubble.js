@@ -1,11 +1,6 @@
 /**
  * 冒泡排序
- */
-
-/**
- * 
- * @param {Array} array 
- * @return { Array } array
+ * @param { Array } array 
  */
 
 let count = 0
