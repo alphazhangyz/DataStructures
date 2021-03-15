@@ -72,7 +72,11 @@ class BinarySearchTree {
   }
 
   // 中序遍历方式遍历所有节点
-  inOrderTraverse () {
+  inOrderTraverse (handler) {
+
+  }
+
+  inOrderTraverseNode (node, handler) {
 
   }
 
@@ -114,7 +118,11 @@ class BinarySearchTree {
 
   // 从树中移除某个键
   remove (key) {
-    
+    // 移除的节点是叶子节点
+
+    // 移除的节点之后一个子节点
+
+    // 移除的节点有2个子节点
   }
 
 
