@@ -28,3 +28,9 @@
 
 - [插入排序](./SortAlgorithms/insertion/index.md)
 
+- [希尔排序](./SortAlgorithms/shell/index.md)
+
+- [快速排序](./SortAlgorithms/quick/index.md)
+
+- [归并排序](./SortAlgorithms/merge/index.md)
+
