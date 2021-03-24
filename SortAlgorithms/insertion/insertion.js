@@ -13,6 +13,18 @@ function insertionSort (array) {
       array[j] = array[j - 1]
       j--
     }
+    // 若arr[i]前有大于 arr[i] 的值的化，向后移位，腾出空间，直到一个 <= arr[i] 的值
+    // let j = i - 1
+    // for (j; j >= 0; j--) {
+    //   if (array[j] > temp) {
+    //     array[j + 1] = array[j]
+    //   } else {
+    //     break
+    //   }
+    // }
+    // array[j + 1] = temp
+
+
     array[j] = temp
   }
 }
