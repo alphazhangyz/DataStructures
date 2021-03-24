@@ -25,7 +25,9 @@ function merge(left, right) {
       rightIndex++
     }
   }
-  return temp.concat(left.slice(leftIndex)).concat(right.slice(rightIndex))
+  // return temp.concat(left.slice(leftIndex)).concat(right.slice(rightIndex))
+  const surplusItems = leftIndex < left.length ? left.slice(leftIndex) : right.slice(rightIndex)
+  return temp.concat(surplusItems)
 }
 
 const arr = [10, 8, 11, 2, 5, 33, 19]
