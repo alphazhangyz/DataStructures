@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function mergeSort (array) {
+      if (array.length <= 1) return array
+      let middle = Math.floor(array.length / 2)
+      let left = array.slice(0, middle)
+      let right = array.slice(middle)
+      debugger
+      return merge(mergeSort(left), mergeSort(right))
+    }
+
+
+    function merge (left, right) {
+      let temp = []
+      let leftIndex = 0
+      let rightIndex = 0
+      debugger
+      while (left.length > leftIndex && right.length > rightIndex) {
+        if (left[leftIndex] > right[rightIndex]) {
+          temp.push(right[rightIndex])
+          rightIndex++
+        } else {
+          temp.push(left[leftIndex])
+          leftIndex++
+        }
+      }
+      return temp.concat(left.slice(leftIndex)).concat(right.slice(rightIndex))
+    }
+    const arr = [10, 8, 11, 2, 5, 33, 19]
+    let ret = mergeSort(arr)
+    console.log(ret)
+
+
+
+  </script>
+</body>
+</html>
