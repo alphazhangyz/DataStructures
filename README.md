@@ -34,3 +34,5 @@
 
 - [归并排序](./SortAlgorithms/merge/index.md)
 
+- [计数排序](./SortAlgorithms/counting/index.md)
+
