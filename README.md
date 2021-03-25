@@ -38,3 +38,9 @@
 
 - [桶排序](./SortAlgorithms/bucket/index.md)   `?`
 
+## 搜索算法
+
+- [顺序搜索](./SearchAlgorithms/sequential/index.md)
+
+- [二分搜索](./SearchAlgorithms/binary/index.md)
+
