@@ -26,6 +26,9 @@ function merge(left, right) {
     }
   }
   // return temp.concat(left.slice(leftIndex)).concat(right.slice(rightIndex))
+  // 看看是 leftIndex 还是 rightIndex 导致的 while 循环结束
+  // 如果是 leftIndex < left.length ，说明 right 部分已经 全部都 push 进 temp 里了，将剩余的 left 部分直接合并即可
+  // 如果 leftIndex >= left.length ，说明 left 部分已经全部 push 进 temp里面了，将剩余的 right 直接合并即可
   const surplusItems = leftIndex < left.length ? left.slice(leftIndex) : right.slice(rightIndex)
   return temp.concat(surplusItems)
 }
