@@ -42,7 +42,7 @@ function findMaxVal (array) {
   return max
 }
 
-const arr = [10, 8, 11, 2, 5, 5, 33, 19]
+const arr = [10, 8, 11, 2, 5, 0, 33, 19]
 const ret = countingSort(arr)
 
 console.log(ret)
