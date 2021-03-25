@@ -36,3 +36,5 @@
 
 - [计数排序](./SortAlgorithms/counting/index.md)
 
+- [桶排序](./SortAlgorithms/bucket/index.md)   `?`
+
